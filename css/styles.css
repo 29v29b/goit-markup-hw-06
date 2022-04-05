@@ -571,6 +571,7 @@ body {
 
 .modal-btn {
   position: absolute;
+  z-index: 1;
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -582,4 +583,126 @@ body {
 .modal-btn svg {
   width: 11px;
   height: 11px;
+}
+
+/*Form*/
+
+.form {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  outline: 1px solid red;
+}
+.form-title {
+margin-bottom: 12px;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.2;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-text-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;  
+  color: var(--secondary-text-color);
+  
+}
+
+.form-field input {
+  margin: 0;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+  
+}
+
+.form-field textarea {
+  margin: 0;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+}
+
+.form-field input:hover,
+.form-field input:focus,
+.form-field textarea:hover,
+.form-field textarea:focus {
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  padding: 0px 11px;
+  margin-bottom: 30px;
+  
+}
+.checkbox label {
+  margin-left: 9px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;  
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.checkbox-link {
+  color: var(--accent-color);
+
+}
+
+.submit-btn {
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px 10px 55px;
+  margin: 0 auto;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #188cef;
 }

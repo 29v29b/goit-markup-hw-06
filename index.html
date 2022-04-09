@@ -292,6 +292,21 @@
               </svg></a></li>
         </ul>
         </div>
+
+        <div class="footer-form">
+          <b class="join">Подпишитесь на рассылку</b>
+
+          <form>
+            <input type="mail" name="mail" id="mail" placeholder="E-mail">
+            <button type="submit" class="footer-btn">Подписаться
+                <svg width="24px" height="24px">
+                  <use href="./images/icons.svg#telegram"></use>
+                </svg>
+            </button>
+            
+          </form>
+        </div>
+
       </div>
       
       </div>
@@ -310,25 +325,38 @@
             <div class="form-field">
               <label for="name" class="form-label">Имя</label>
               <input type="text" name="name" id="name">
+              <svg width="18px" height="18px" class="form-icon">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
             </div>
+
             <div class="form-field">
               <label for="tel" class="form-label">Телефон</label>
               <input type="tel" name="tel" id="tel">
+              <svg width="18px" height="18px" class="form-icon">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
           </div>
+
             <div class="form-field">
               <label for="mail" class="form-label">Почта</label>
               <input type="mail" name="mail" id="mail">
+              <svg width="18px" height="18px" class="form-icon">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+              
           </div>
           <div class="form-field">
           <label class="form-label">Комментарий</label>
             <textarea name="feedback" rows="5" placeholder="Введите текст"></textarea>
           </div>
-
-          <div class="checkbox">
+            
+          <div class="checkbox-thumb">
             <input type="checkbox" name="policy" id="policy">
+            <span class="checkbox-icon"></span>
             <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#" class="checkbox-link">Условия договора</a></label>
           </div>
-          
+
           <button type="submit" class="submit-btn">Отправить</button>
         </form>
       </div>

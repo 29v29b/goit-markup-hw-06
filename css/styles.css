@@ -191,7 +191,7 @@ body {
 }
 .footer-join {
   margin-top: 12px;
-  margin-left: 70px;
+  margin-left: auto;
 }
 .join {
   font-weight: 700px;
@@ -215,6 +215,56 @@ body {
   margin-right: 10px;
 }
 
+.footer-form {
+  position: relative;
+  margin-top: 12px;
+  margin-left: auto;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: row;
+}
+.footer-form input {
+  width: 358px;
+  margin: 20px 12px 0px 0px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background: #2F303A;
+  border-radius: 4px;
+}
+.footer-btn { 
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #188cef;
+  }
+
+.footer-form svg {
+  margin-left: 10px;
+  fill: #ffffff;
+}
 /* Studio */
 
 .hero {
@@ -583,6 +633,11 @@ body {
 .modal-btn svg {
   width: 11px;
   height: 11px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn svg:hover,
+.modal-btn svg:focus {
+  fill: var(--accent-color);
 }
 
 /*Form*/
@@ -592,8 +647,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   padding: 40px;
-  outline: 1px solid red;
+  outline: red 1px solid;
 }
 .form-title {
 margin-bottom: 12px;
@@ -606,6 +662,7 @@ color: var(--primary-text-color);
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -617,12 +674,11 @@ color: var(--primary-text-color);
   line-height: 1.2;
   letter-spacing: 0.01em;  
   color: var(--secondary-text-color);
-  
 }
 
 .form-field input {
   margin: 0;
-  padding: 12px;
+  padding: 12px 40px;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -632,6 +688,14 @@ color: var(--primary-text-color);
   
 }
 
+.form-icon {
+  position: absolute;
+  top: 57%;
+  left: 12px;
+  transform: translateY(-57%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-field textarea {
   margin: 0;
   padding: 12px 16px;
@@ -639,6 +703,7 @@ color: var(--primary-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  resize: none;
 }
 
 .form-field textarea::placeholder {
@@ -658,27 +723,66 @@ color: var(--primary-text-color);
   border-radius: 4px;
 }
 
-.checkbox {
+.form-field input:hover~.form-icon,
+.form-field input:focus~.form-icon {
+  fill: var(--accent-color);
+}
+
+.checkbox-thumb {
   display: flex;
   align-items: center;
-  padding: 0px 11px;
-  margin-bottom: 30px;
   
-}
-.checkbox label {
-  margin-left: 9px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1.7;  
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
 .checkbox-link {
   color: var(--accent-color);
+}
 
+#policy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#policy:checked {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: #212121 2px solid;
+  border-radius: 2px;
+  margin-left: 11px;
+  margin-right: 7px;
+}
+
+#policy:checked + .checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: #2196F3 2px solid;
+  border-radius: 2px;
+  background-color: #2196F3;
+  background-image: url('./images/icons.svg#check');
+  background-size: contain;
+  background-origin: border-box;
+  fill: #ffffff;
+  margin-right: 7px;
 }
 
 .submit-btn {

@@ -756,7 +756,11 @@ color: var(--primary-text-color);
   color: var(--accent-color);
   margin: 0 auto;
 }
-
+.policy-checkbox:focus+.checkbox-label::before {
+  width: 16px;
+  height: 15px;
+  outline: var(--primary-text-color) 1px solid;
+}
 .policy-checkbox:checked + .checkbox-label::before {
   width: 16px;
   height: 15px;
@@ -768,6 +772,7 @@ color: var(--primary-text-color);
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 7px;
+  outline: none;
 }
 
 .visually-hidden {
